@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:sl_flutter_ui_library/sl_flutter_ui_library.dart';
+import 'button_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,10 +53,24 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('SL Flutter UI Library Example'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Running on: $_platformVersion\n'),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ButtonExample()),
+                  );
+                },
+                child: const Text('View Button Examples'),
+              ),
+            ],
+          ),
         ),
       ),
     );

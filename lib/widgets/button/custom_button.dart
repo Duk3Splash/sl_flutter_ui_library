@@ -9,6 +9,7 @@ class CustomButton extends StatefulWidget {
   final bool isLoading;
   final double? width;
   final double? height;
+  final TextStyle? textStyle;
 
   const CustomButton({
     Key? key,
@@ -20,6 +21,7 @@ class CustomButton extends StatefulWidget {
     this.isLoading = false,
     this.width,
     this.height,
+    this.textStyle,
   }) : super(key: key);
 
   @override
@@ -116,7 +118,9 @@ class _CustomButtonState extends State<CustomButton> {
                     if (!widget.isLoading || widget.icon == null)
                       Text(
                         widget.text,
-                        style: TextStyle(
+                        style: widget.textStyle?.copyWith(
+                          color: buttonConfig.textColor,
+                        ) ?? TextStyle(
                           color: buttonConfig.textColor,
                           fontSize: buttonConfig.fontSize,
                           fontWeight: buttonConfig.fontWeight,
