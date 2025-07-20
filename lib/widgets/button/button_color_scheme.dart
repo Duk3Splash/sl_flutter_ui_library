@@ -64,21 +64,21 @@ class ButtonColorScheme {
         ButtonState.pressed: ColorPalette.lightPurple2_20,
       },
       SLButtonTheme.dark: {
-        ButtonState.normal: Colors.transparent,
-        ButtonState.hover: Colors.transparent,
-        ButtonState.pressed: Colors.transparent,
+        ButtonState.normal: ColorPalette.darkPurple5,
+        ButtonState.hover: ColorPalette.darkPurple2,
+        ButtonState.pressed: ColorPalette.darkPurple2,
       },
     },
     ButtonType.tertiary: {
       SLButtonTheme.light: {
-        ButtonState.normal: ColorPalette.white,
-        ButtonState.hover: ColorPalette.white,
-        ButtonState.pressed: ColorPalette.white,
+        ButtonState.normal: Colors.transparent,
+        ButtonState.hover: Colors.transparent,
+        ButtonState.pressed: Colors.transparent,
       },
       SLButtonTheme.dark: {
         ButtonState.normal: Colors.transparent,
-        ButtonState.hover: ColorPalette.lightPurple20,
-        ButtonState.pressed: ColorPalette.lightPurple20,
+        ButtonState.hover: Colors.transparent,
+        ButtonState.pressed: Colors.transparent,
       },
     },
   };
@@ -115,9 +115,9 @@ class ButtonColorScheme {
         ButtonState.pressed: ColorPalette.darkPurple2,
       },
       SLButtonTheme.dark: {
-        ButtonState.normal: ColorPalette.lightPurple3,
-        ButtonState.hover: ColorPalette.lightPurple,
-        ButtonState.pressed: ColorPalette.lightPurple,
+        ButtonState.normal: ColorPalette.lightGrey,
+        ButtonState.hover: ColorPalette.lightGrey,
+        ButtonState.pressed: ColorPalette.lightGrey,
       },
     },
     ButtonType.tertiary: {

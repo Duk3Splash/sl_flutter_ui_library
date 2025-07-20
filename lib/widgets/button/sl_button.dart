@@ -85,7 +85,7 @@ class _SLButtonState extends State<SLButton> {
               decoration: BoxDecoration(
                 color: backgroundColor,
                 borderRadius: BorderRadius.circular(AppCornerRadius.radiusFull),
-                border: borderColor != null ? Border.all(color: borderColor, width: 1) : null,
+                border: borderColor != null ? Border.all(color: borderColor, width: 2) : null,
                 boxShadow: shouldHaveBoxShadow ? [
                   innerboxshadow.BoxShadow(
                     color: shadowColor,
