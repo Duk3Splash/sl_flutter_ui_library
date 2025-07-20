@@ -12,59 +12,108 @@ class ButtonExample extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const Text('CTA XL Button', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+            const Text('Primary Buttons', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
-            CtaXL(
-              text: 'CTA XL Primary',
-              onPressed: () => print('CTA XL Primary pressed'),
-              variant: ButtonVariant.primary,
+            SLButton(
+              size: ButtonSize.extraLarge,
+              theme: SLButtonTheme.light,
+              type: ButtonType.primary,
+              onPressed: () => print('Primary XL pressed'),
+              child: const Text('Primary XL'),
+            ),
+            const SizedBox(height: 8),
+            SLButton(
+              size: ButtonSize.large,
+              theme: SLButtonTheme.light,
+              type: ButtonType.primary,
+              onPressed: () => print('Primary L pressed'),
+              child: const Text('Primary L'),
             ),
             const SizedBox(height: 16),
             
-            const Text('CTA L Button', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const Text('Secondary Filled Buttons', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
-            CtaL(
-              text: 'CTA L Secondary',
-              onPressed: () => print('CTA L Secondary pressed'),
-              variant: ButtonVariant.secondary,
+            SLButton(
+              size: ButtonSize.medium,
+              theme: SLButtonTheme.light,
+              type: ButtonType.secondaryFilled,
+              onPressed: () => print('Secondary Filled pressed'),
+              child: const Text('Secondary Filled'),
             ),
             const SizedBox(height: 16),
             
-            const Text('CTA M Button', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const Text('Secondary Buttons', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
-            CtaM(
-              text: 'CTA M Outlined',
-              onPressed: () => print('CTA M Outlined pressed'),
-              variant: ButtonVariant.outlined,
+            SLButton(
+              size: ButtonSize.small,
+              theme: SLButtonTheme.light,
+              type: ButtonType.secondary,
+              onPressed: () => print('Secondary pressed'),
+              child: const Text('Secondary'),
             ),
             const SizedBox(height: 16),
             
-            const Text('CTA S Button', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const Text('Tertiary Buttons', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
-            CtaS(
-              text: 'CTA S Text',
-              onPressed: () => print('CTA S Text pressed'),
-              variant: ButtonVariant.text,
+            SLButton(
+              size: ButtonSize.medium,
+              theme: SLButtonTheme.light,
+              type: ButtonType.tertiary,
+              onPressed: () => print('Tertiary pressed'),
+              child: const Text('Tertiary'),
             ),
             const SizedBox(height: 16),
             
-            const Text('Disabled Buttons', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const Text('Dark Theme Buttons', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
-            CtaL(
-              text: 'Disabled Button',
-              onPressed: () => print('This should not print'),
+            Container(
+              color: Colors.black,
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  SLButton(
+                    size: ButtonSize.large,
+                    theme: SLButtonTheme.dark,
+                    type: ButtonType.primary,
+                    onPressed: () => print('Dark Primary pressed'),
+                    child: const Text('Dark Primary'),
+                  ),
+                  const SizedBox(height: 8),
+                  SLButton(
+                    size: ButtonSize.medium,
+                    theme: SLButtonTheme.dark,
+                    type: ButtonType.secondary,
+                    onPressed: () => print('Dark Secondary pressed'),
+                    child: const Text('Dark Secondary'),
+                  ),
+                  const SizedBox(height: 8),
+                  SLButton(
+                    size: ButtonSize.medium,
+                    theme: SLButtonTheme.dark,
+                    type: ButtonType.tertiary,
+                    onPressed: () => print('Dark Tertiary pressed'),
+                    child: const Text('Dark Tertiary'),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            
+            const Text('Disabled Button', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            SLButton(
+              size: ButtonSize.medium,
+              theme: SLButtonTheme.light,
+              type: ButtonType.primary,
               isEnabled: false,
-            ),
-            const SizedBox(height: 8),
-            CtaM(
-              text: 'Loading Button',
-              onPressed: () => print('Loading'),
-              isLoading: true,
+              child: const Text('Disabled'),
             ),
           ],
+          ),
         ),
       ),
     );
