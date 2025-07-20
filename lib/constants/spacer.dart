@@ -3,10 +3,17 @@ class AppSpacers {
   
   static const double spacer2 = 2.0;
   static const double spacer4 = 4.0;
+  static const double spacer7 = 7.0;
   static const double spacer8 = 8.0;
+  static const double spacer9 = 9.0;
+  static const double spacer10 = 10.0;
+  static const double spacer11 = 11.0;
   static const double spacer12 = 12.0;
+  static const double spacer14 = 14.0;
   static const double spacer16 = 16.0;
   static const double spacer20 = 20.0;
+  static const double spacer21 = 21.0;
+  static const double spacer22 = 22.0;
   static const double spacer24 = 24.0;
   static const double spacer32 = 32.0;
   static const double spacer40 = 40.0;

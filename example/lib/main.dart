@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:sl_flutter_ui_library/sl_flutter_ui_library.dart';
 import 'button_example.dart';
+import 'sl_button_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,27 +52,41 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('SL Flutter UI Library Example'),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Running on: $_platformVersion\n'),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const ButtonExample()),
-                  );
-                },
-                child: const Text('View Button Examples'),
+      home: Builder(
+        builder: (BuildContext context) {
+          return Scaffold(
+            appBar: AppBar(
+              title: const Text('SL Flutter UI Library Example'),
+            ),
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Running on: $_platformVersion\n'),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const ButtonExample()),
+                      );
+                    },
+                    child: const Text('View Button Examples'),
+                  ),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SLButtonExample()),
+                      );
+                    },
+                    child: const Text('View SLButton Examples'),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ),
+            ),
+          );
+        },
       ),
     );
   }
